@@ -13,7 +13,8 @@ const Contact = () => {
     setFields({ ...fields, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
     if (loading || sent) return
     setLoading(true)
     setError('')
