@@ -17,11 +17,29 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  .top-block {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-color: #010101 transparent currentcolor;
+    border-style: solid solid none;
+    border-width: 50vh 0 medium 50vw;
+  }
+  .bottom-block {
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    border-color: currentcolor transparent #010101;
+    border-style: none solid solid;
+    border-width: medium 50vw 50vh 0;
   }
 }
