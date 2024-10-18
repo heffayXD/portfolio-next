@@ -8,8 +8,8 @@ import heroImage from '@/images/hero.jpg'
 const navigation = [
   { label: 'About', id: '#about' },
   { label: 'Technologies', id: '#technologies' },
-  // { label: 'Experience', id: '#experience' },
-  // { label: 'Past Projects', id: '#projects' },
+  { label: 'Experience', id: '#experience' },
+  { label: 'Past Projects', id: '#projects' },
   { label: 'Contact', id: '#contact' }
 ]
 
