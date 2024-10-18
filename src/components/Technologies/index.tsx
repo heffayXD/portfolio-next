@@ -26,7 +26,7 @@ const Technologies = () => {
   return (
     <div
       id='technologies'
-      className='relative overflow-hidden py-8'
+      className='relative overflow-hidden py-12'
     >
       <h1 className='text-4xl text-center w-full font-medium mb-16'>
         Technologies
