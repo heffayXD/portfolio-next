@@ -17,7 +17,7 @@ const Icons = () => {
   ]
 
   return (
-    <div className='absolute top-12 min-w-[200%] z-10 flex justify-between items-center gap-4 animate-scroll'>
+    <div className='absolute top-12 min-w-[200%] z-10 flex justify-between items-center gap-4 animate-scroll text-5xl'>
       {icons.map(({ icon, label }) => (
         <span
           className='w-12 h-12 block opacity-10'
