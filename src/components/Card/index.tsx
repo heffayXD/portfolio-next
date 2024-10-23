@@ -8,14 +8,14 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 
 import { useScroll } from '@/hooks/scroll'
 
-const Card = ({ title, children, technologies = [], links = [], image, imageAlt, reverse = false }) => {
+const Card = ({ title = '', children, technologies = [], links = [], image = null, imageAlt = '', reverse = false }) => {
   const [show, setShow] = useState(false)
   const refContainer = useRef(null)
 
   useScroll(() => {
     if (!refContainer.current) return
     const top = refContainer.current.getBoundingClientRect().top || null
-    if (top < (window.innerHeight - 100)) {
+    if (top < (window.innerHeight - (window.innerHeight / 3))) {
       setShow(true)
     }
   })
@@ -42,9 +42,9 @@ const Card = ({ title, children, technologies = [], links = [], image, imageAlt,
         <h2 className='mb-4 text-2xl font-semibold font-montserrat'>
           {title}
         </h2>
-        <p className='mb-4'>
+        <div className='mb-4'>
           {children}
-        </p>
+        </div>
         <h3 className='text-xl font-semibold font-montserrat'>
           Technologies
         </h3>
@@ -65,13 +65,18 @@ const Card = ({ title, children, technologies = [], links = [], image, imageAlt,
           ))}
           </div>
       </div>
-      <div className='text-center p-3 md:w-[50%] w-full'>
-        <Image
-          className='w-full max-h-[400px] object-contain'
-          src={image}
-          alt={imageAlt}
-        />
-      </div>
+      {
+        image !== null && (
+          <div className='text-center p-3 md:w-[50%] w-full'>
+            <Image
+              className='w-full max-h-[400px] object-contain'
+              src={image}
+              alt={imageAlt}
+            />
+          </div>
+        )
+      }
+      
       
     </div>
   )
