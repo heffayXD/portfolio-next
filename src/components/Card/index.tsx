@@ -36,7 +36,7 @@ const Card = ({ title = '', children, technologies = [], links = [], image = nul
   return (
     <div className={`max-w-[1200px] mx-auto mt-4 mb-4 w-full md:flex md:justify-center md:items-center ${reverse ? 'md:flex-row-reverse' : ''}`}>
       <div
-        className={`md:shadow-lg md:rounded-xl md:border md:w-[50%] md:p-10 md:text-left p-4 m-3 transition-all text-center ${show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        className={`md:shadow-lg md:rounded-xl md:border md:p-10 md:text-left p-4 m-3 transition-all text-center ${image !== null ? 'md:w-[50%]' : 'w-full'} ${show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         ref={refContainer}
       >
         <h2 className='mb-4 text-2xl font-semibold font-montserrat'>
