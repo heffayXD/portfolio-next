@@ -1,0 +1,80 @@
+'use client'
+import { useState, useRef } from 'react'
+import Image from 'next/image'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faWindows, faAndroid, faNpm } from '@fortawesome/free-brands-svg-icons'
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+
+import { useScroll } from '@/hooks/scroll'
+
+const Card = ({ title, children, technologies = [], links = [], image, imageAlt, reverse = false }) => {
+  const [show, setShow] = useState(false)
+  const refContainer = useRef(null)
+
+  useScroll(() => {
+    if (!refContainer.current) return
+    const top = refContainer.current.getBoundingClientRect().top || null
+    if (top < (window.innerHeight - 100)) {
+      setShow(true)
+    }
+  })
+
+  const getIcon = (icon: string) => {
+    const icons = {
+      github: faGithub,
+      website: faExternalLinkAlt,
+      windows: faWindows,
+      android: faAndroid,
+      npm: faNpm,
+    }
+
+    return icons[icon] || (<></>)
+
+  }
+
+  return (
+    <div className={`max-w-[1200px] mx-auto mt-4 mb-4 w-full md:flex md:justify-center md:items-center ${reverse ? 'md:flex-row-reverse' : ''}`}>
+      <div
+        className={`md:shadow-lg md:rounded-xl md:border md:w-[50%] md:p-10 md:text-left p-4 m-3 transition-all text-center ${show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        ref={refContainer}
+      >
+        <h2 className='mb-4 text-2xl font-semibold font-montserrat'>
+          {title}
+        </h2>
+        <p className='mb-4'>
+          {children}
+        </p>
+        <h3 className='text-xl font-semibold font-montserrat'>
+          Technologies
+        </h3>
+        <p>{technologies.join(', ')}</p>
+        <div className='mt-4'>
+          {links.map((link, index) => (
+            <a
+              href={link.url}
+              target='_blank'
+              title={link.title}
+              download={link.download}
+              rel='noopener noreferrer'
+              className='mr-4 text-3xl'
+              key={`link-${title}-${index}`}
+            >
+              <FontAwesomeIcon icon={getIcon(link.icon)} />
+            </a>
+          ))}
+          </div>
+      </div>
+      <div className='text-center p-3 md:w-[50%] w-full'>
+        <Image
+          className='w-full max-h-[400px] object-contain'
+          src={image}
+          alt={imageAlt}
+        />
+      </div>
+      
+    </div>
+  )
+}
+
+export default Card
