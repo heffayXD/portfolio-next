@@ -28,7 +28,7 @@ const Technologies = () => {
       id='technologies'
       className='relative overflow-hidden py-12'
     >
-      <h1 className='text-4xl text-center w-full font-medium mb-16'>
+      <h1 className='text-4xl text-center w-full font-bold mb-16 font-montserrat'>
         Technologies
       </h1>
       <Icons />
@@ -38,7 +38,7 @@ const Technologies = () => {
             className='m-3 mt-6 p-3 flex justify-center flex-wrap'
             key={`experience-${title}`}
           >
-            <h3 className='w-full text-center mb-3 text-3xl font-medium'>
+            <h3 className='w-full text-center mb-3 text-3xl font-bold font-montserrat'>
               {title}
             </h3>
             <ul>

@@ -17,7 +17,7 @@ const Hero = () => {
   return (
     <div className='relative min-h-[100vh] text-center bg-black text-white flex flex-wrap lg:justify-start lg:items-start justify-center items-center overflow-hidden'>
       <div className='w-full lg:text-right lg:mr-24 lg:mt-24 md:text-3xl md:p-0 p-4 z-10'>
-        <h1 className='text-5xl font-medium mb-4'>
+        <h1 className='text-5xl font-bold font-montserrat mb-4'>
           Full Stack Development
         </h1>
         <div className='inline-flex gap-6'>
@@ -43,12 +43,12 @@ const Hero = () => {
         </div>
       </div>
       <div className='font-medium lg:text-left text-2xl center lg:absolute left-24 bottom-24 md:block hidden z-10'>
-        <h2 className=''>
+        <h2 className='font-montserrat font-bold'>
           Navigation
         </h2>
         {navigation.map(({ label, id }) => (
           <a
-            className='block opacity-60 hover:opacity-100 transition-opacity'
+            className='block opacity-60 hover:opacity-100 transition-opacity font-montserrat'
             key={`navigation-${id}`}
             href={id}
           >

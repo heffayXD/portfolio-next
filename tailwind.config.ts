@@ -20,7 +20,7 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-roboto)', 'sans-serif'],
         roboto: ['var(--font-roboto)', 'sans-serif'],
-        montsrrat: ['var(--font-montserrat)', 'sans-serif']
+        montserrat: ['var(--font-montserrat)', 'sans-serif']
       },
       colors: {
         background: 'var(--background)',

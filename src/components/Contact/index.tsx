@@ -38,7 +38,9 @@ const Contact = () => {
       id='contact'
       className='flex justify-around items-center flex-wrap py-10 bg-white text-primary'
     >
-      <h1 className='text-4xl text-center w-full font-medium'>Contact</h1>
+      <h1 className='text-4xl text-center w-full font-bold font-montserrat'>
+        Contact
+      </h1>
       <form
         className='p-0 mt-5 max-w-[800px] text-center md:mt-0 md:p-5'
         onSubmit={handleSubmit}

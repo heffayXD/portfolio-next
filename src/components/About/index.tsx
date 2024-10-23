@@ -4,7 +4,9 @@ const About = () => {
       id='about'
       className='bg-white text-primary py-12'
     >
-      <h3 className='text-4xl text-center w-full font-medium mb-4'>About</h3>
+      <h3 className='text-4xl text-center w-full font-bold mb-4 font-montserrat'>
+        About
+      </h3>
       <p className='p-4 max-w-[800px] mx-auto text-justify'>
         Hey. I&apos;m Jeff - a Full Stack Developer with around 6 years of experience and a passion for working on projects that will 
         teach me something new. I&apos;ve worked on building customer facing E-Commerce sites alongside teams of developers, designing 
