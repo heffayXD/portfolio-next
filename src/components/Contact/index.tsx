@@ -36,7 +36,7 @@ const Contact = () => {
   return (
     <div
       id='contact'
-      className='flex justify-around items-center flex-wrap py-10 bg-white text-primary'
+      className='flex justify-around items-center flex-wrap py-10 bg-primary text-white'
     >
       <h1 className='text-4xl text-center w-full font-bold font-montserrat'>
         Contact
@@ -48,7 +48,7 @@ const Contact = () => {
         <div className='flex md:flex-nowrap gap-4 flex-wrap justify-center w-full mb-4'>
           <input
             required
-            className='w-full md:m-auto m-2 text-base rounded-md p-4 border-0 bg-primary text-white shadow-md outline-none'
+            className='w-full md:m-auto m-2 text-base rounded-md p-4 border-0 bg-white text-primary placeholder-primary shadow-md outline-none'
             type='text'
             name='name'
             aria-label='Name'
@@ -58,7 +58,7 @@ const Contact = () => {
           />
           <input
             required
-            className='w-full md:m-auto m-2 text-base rounded-md p-4 border-0 bg-primary text-white shadow-md outline-none'
+            className='w-full md:m-auto m-2 text-base rounded-md p-4 border-0 bg-white text-primary placeholder-primary shadow-md outline-none'
             type='text'
             name='email'
             aria-label='Email'
@@ -70,7 +70,7 @@ const Contact = () => {
         <div className='flex flex-wrap justify-center w-full mb-4'>
           <textarea
             required
-            className='w-full md:m-auto m-2 text-base rounded-md p-4 border-0 bg-primary text-white shadow-md max-w-full resize-none min-h-[15vh] outline-none'
+            className='w-full md:m-auto m-2 text-base rounded-md p-4 border-0 bg-white text-primary placeholder-primary shadow-md max-w-full resize-none min-h-[15vh] outline-none'
             name='message'
             aria-label='Message'
             placeholder='Message'
@@ -81,7 +81,7 @@ const Contact = () => {
 
         <input
           type='submit'
-          className='uppercase md:w-full w-[calc(100%_-_1rem)] md:mx-auto mx-2 rounded-md bg-primary text-white border-none shadow-md py-4 text-lg px-10 hover:cursor-pointer active:bg-black mb-4 outline-none'
+          className='uppercase md:w-full w-[calc(100%_-_1rem)] md:mx-auto mx-2 rounded-md bg-white text-primary placeholder-primary border-none shadow-md py-4 text-lg px-10 hover:cursor-pointer active:bg-black mb-4 outline-none'
           value={loading ? 'Sending...' : (sent ? 'Sent' : 'Submit')}
           disabled={loading || sent}
         />
