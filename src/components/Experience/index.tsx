@@ -5,9 +5,9 @@ const cards = [
     title: 'Scoutside / Bear Group',
     body: (
       <p>
-        <h4 className='font-medium text-lg'>
+        <strong className='font-medium text-lg'>
           Full Stack Developer
-        </h4>
+        </strong>
         <em className='mb-2 block'>
           November 2021 - September 2024
         </em>
@@ -49,9 +49,9 @@ const cards = [
     title: 'Freelance Software Development',
     body: (
       <p>
-        <h4 className='font-medium text-lg'>
+        <strong className='font-medium text-lg'>
           Full Stack Developer
-        </h4>
+        </strong>
         <em className='mb-2 block'>
           July 2020 - November 2021
         </em>
@@ -77,9 +77,9 @@ const cards = [
     title: 'Subsync Inc',
     body: (
       <p>
-        <h4 className='font-medium text-lg'>
+        <strong className='font-medium text-lg'>
           Full Stack Developer
-        </h4>
+        </strong>
         <em className='mb-2 block'>
           September 2020 - January 2021
         </em>
@@ -114,9 +114,9 @@ const cards = [
     title: 'Your Design Guys',
     body: (
       <p>
-        <h4 className='font-medium text-lg'>
+        <strong className='font-medium text-lg'>
           Full Stack Developer
-        </h4>
+        </strong>
         <em className='mb-2 block'>
           October 2018 - July 2020
         </em>
