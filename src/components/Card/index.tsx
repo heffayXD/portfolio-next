@@ -1,5 +1,5 @@
 'use client'
-import { useState, useRef } from 'react'
+import { useState, useRef, ReactNode } from 'react'
 import Image from 'next/image'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -7,14 +7,32 @@ import { faGithub, faWindows, faAndroid, faNpm } from '@fortawesome/free-brands-
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 
 import { useScroll } from '@/hooks/scroll'
+import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 
-const Card = ({ title = '', children, technologies = [], links = [], image = null, imageAlt = '', reverse = false }) => {
+type Link = {
+  url: string,
+  title: string,
+  download: boolean,
+  icon: string,
+}
+
+type CardProps = {
+  title: string,
+  children: ReactNode,
+  technologies: string[],
+  links: Link[],
+  image: StaticImport | null,
+  imageAlt: string,
+  reverse: boolean
+}
+
+const Card = ({ title = '', children, technologies = [], links = [], image = null, imageAlt = '', reverse = false }: CardProps) => {
   const [show, setShow] = useState(false)
-  const refContainer = useRef(null)
+  const refContainer = useRef<HTMLInputElement>(null)
 
   useScroll(() => {
     if (!refContainer.current) return
-    const top = refContainer.current.getBoundingClientRect().top || null
+    const top = refContainer.current.getBoundingClientRect().top
     if (top < (window.innerHeight - (window.innerHeight / 3))) {
       setShow(true)
     }
@@ -29,7 +47,7 @@ const Card = ({ title = '', children, technologies = [], links = [], image = nul
       npm: faNpm,
     }
 
-    return icons[icon] || (<></>)
+    return icons[icon as keyof typeof icons] || (<></>)
 
   }
 

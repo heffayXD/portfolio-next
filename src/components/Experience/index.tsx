@@ -168,6 +168,8 @@ const Experience = () => {
             links={links}
             key={`experience-card-${title}`}
             reverse={index % 2 != 0}
+            image={null}
+            imageAlt=''
           >
             {body}
           </Card>
