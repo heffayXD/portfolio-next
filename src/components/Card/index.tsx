@@ -94,8 +94,6 @@ const Card = ({ title = '', children, technologies = [], links = [], image = nul
           </div>
         )
       }
-      
-      
     </div>
   )
 }
