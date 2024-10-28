@@ -22,7 +22,7 @@ const Hero = () => {
         </h1>
         <div className='inline-flex gap-6'>
           <a
-            className='block w-8 h-8 opacity-60 hover:opacity-100 transition-opacity'
+            className='block w-8 h-8 opacity-60 hover:opacity-100 transition-opacity text-3xl'
             href='https://github.com/heffayXD'
             target='_blank'
             rel='noopener noreferrer'
@@ -31,7 +31,7 @@ const Hero = () => {
             <FontAwesomeIcon icon={faGithub} />
           </a>
           <a
-            className='block w-8 h-8 opacity-60 hover:opacity-100 transition-opacity'
+            className='block w-8 h-8 opacity-60 hover:opacity-100 transition-opacity text-3xl'
             href='/downloads/Resume.pdf'
             target='_blank'
             rel='nofollow'
@@ -63,6 +63,7 @@ const Hero = () => {
           className='opacity-30 lg:blur-[1px] blur-[2px] h-full w-auto min-w-full object-cover'
           src={heroImage}
           alt='Code'
+          priority
         />
       </div>
     </div>
