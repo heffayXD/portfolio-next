@@ -4,13 +4,13 @@ const cards = [
   {
     title: 'Scoutside / Bear Group',
     body: (
-      <p>
-        <strong className='font-medium text-lg'>
+      <div>
+        <h3 className='font-medium text-lg'>
           Full Stack Developer
-        </strong>
-        <em className='mb-2 block'>
+        </h3>
+        <h4 className='mb-2 block italic'>
           November 2021 - September 2024
-        </em>
+        </h4>
         <ul className='list-disc text-left'>
           <li>Built and maintained headless Shopify sites</li>
           <li>Developed custom Shopify themes and subscription portals using modern technologies</li>
@@ -19,7 +19,7 @@ const cards = [
           <li>Led website and database migrations with over 100,000 active subscribers to new subscription services and platforms</li>
           <li>Converted legacy code and created new applications through Shopify Functions and serverless frameworks</li>
         </ul>
-      </p>
+      </div>
     ),
     technologies: [
       'Shopify',
@@ -48,20 +48,20 @@ const cards = [
   {
     title: 'Freelance Software Development',
     body: (
-      <p>
-        <strong className='font-medium text-lg'>
+      <div>
+        <h3 className='font-medium text-lg'>
           Full Stack Developer
-        </strong>
-        <em className='mb-2 block'>
+        </h3>
+        <h4 className='mb-2 block italic'>
           July 2020 - November 2021
-        </em>
+        </h4>
         <ul className='list-disc text-left'>
           <li>Built custom sites for small businesses</li>
           <li>Developed a system that would generate necessary documents for importing goods</li>
           <li>Developed a custom CMS for a vehicle dealer that allowed them to control and monitor their inventory</li>
           <li>Hosted multiple sites and integrated with custom Express APIs</li>
         </ul>
-      </p>
+      </div>
     ),
     technologies: [
       'Node',
@@ -76,20 +76,20 @@ const cards = [
   {
     title: 'Subsync Inc',
     body: (
-      <p>
-        <strong className='font-medium text-lg'>
+      <div>
+        <h3 className='font-medium text-lg'>
           Full Stack Developer
-        </strong>
-        <em className='mb-2 block'>
+        </h3>
+        <h4 className='mb-2 block italic'>
           September 2020 - January 2021
-        </em>
+        </h4>
         <ul className='list-disc text-left'>
           <li>Designed a frontend application for admins to manage screens throughout their business</li>
           <li>Created an Express API that would interface with network of Raspberry Pi devices</li>
           <li>Developed custom ORM to quickly manage databases</li>
           <li>Created new landing site through Next.js</li>
         </ul>
-      </p>
+      </div>
     ),
     technologies: [
       'Node',
@@ -113,20 +113,20 @@ const cards = [
   {
     title: 'Your Design Guys',
     body: (
-      <p>
-        <strong className='font-medium text-lg'>
+      <div>
+        <h3 className='font-medium text-lg'>
           Full Stack Developer
-        </strong>
-        <em className='mb-2 block'>
+        </h3>
+        <h4 className='mb-2 block italic'>
           October 2018 - July 2020
-        </em>
+        </h4>
         <ul className='list-disc text-left'>
           <li>Built out customer facing frontend apps using React JS and Vue</li>
           <li>Developed and maintained custom PHP plugins</li>
           <li>Used many frameworks like Laravel, Lumen, and ASP.NET</li>
           <li>Handled deployment of websites and cloud applications, managed DNS settings, and set up migrations through Azure and AWS</li>
         </ul>
-      </p>
+      </div>
     ),
     technologies: [
       'Node',
