@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Montserrat, Roboto } from 'next/font/google'
 
 import './globals.css'
@@ -30,6 +31,10 @@ export default function RootLayout({ children }: Readonly<{children: React.React
     >
       <body>
         {children}
+        <Script
+          src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+          strategy="beforeInteractive"
+        />
       </body>
     </html>
   )
