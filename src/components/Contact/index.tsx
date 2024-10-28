@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 
-// import { getRecaptchaToken } from 'helpers/auth'
+import { getRecaptchaToken } from '@/helpers/auth'
 
 const Contact = () => {
   const [fields, setFields] = useState({ name: '', email: '', message: '' })
@@ -20,14 +20,16 @@ const Contact = () => {
     setError('')
 
     try {
-      // const token = await getRecaptchaToken()
-      // const [success, result] = await api.post('/contact', { ...fields, token })
-      // if (!success) throw result
+      const token = await getRecaptchaToken()
+      await fetch('/api/contact', {
+          method: 'post',
+          body: JSON.stringify({ ...fields, token })
+      })
 
       setSent(true)
     } catch (err) {
       console.error(err)
-      setError('Something went Wrong')
+      setError('Something went wrong')
     }
     
     setLoading(false)
