@@ -10,19 +10,19 @@ import { useScroll } from '@/hooks/scroll'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 
 type Link = {
-  url: string,
-  title: string,
-  download: boolean,
-  icon: string,
+  url: string
+  title: string
+  download: boolean
+  icon: string
 }
 
 type CardProps = {
-  title: string,
-  children: ReactNode,
-  technologies: string[],
-  links: Link[],
-  image: StaticImport | null,
-  imageAlt: string,
+  title: string
+  children: ReactNode
+  technologies: string[]
+  links: Link[]
+  image: StaticImport | null
+  imageAlt: string
   reverse: boolean
 }
 
