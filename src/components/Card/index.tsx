@@ -38,7 +38,7 @@ const Card = ({ title = '', children, technologies = [], links = [], image = nul
     }
   })
 
-  const getIcon = (icon: string) => {
+  const getIcon = (iconKey: string) => {
     const icons = {
       github: faGithub,
       website: faExternalLinkAlt,
@@ -47,7 +47,7 @@ const Card = ({ title = '', children, technologies = [], links = [], image = nul
       npm: faNpm,
     }
 
-    return icons[icon as keyof typeof icons] || (<></>)
+    return icons[iconKey as keyof typeof icons] || (<></>)
 
   }
 
